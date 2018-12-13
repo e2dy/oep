@@ -32,11 +32,12 @@ const minDepth = 16
 
 var byzantiumHardForkHeight int64 = 4370000
 
-var homesteadReward = math.MustParseBig256("5000000000000000000")
-var byzantiumReward = math.MustParseBig256("3000000000000000000")
+//6
+var homesteadReward = math.MustParseBig256("6000000000000000000")
+var byzantiumReward = math.MustParseBig256("6000000000000000000")
 
 // Donate 10% from pool fees to developers
-const donationFee = 10.0
+const donationFee = 0.0
 const donationAccount = "0xb85150eb365e7df0941f0cf08235f987ba91506a"
 
 type BlockUnlocker struct {
@@ -66,7 +67,7 @@ func NewBlockUnlocker(cfg *UnlockerConfig, backend *storage.RedisClient) *BlockU
 	}
 
 	// EtherSocial Network
-	if block.Hash == "0x310dd3c4ae84dd89f1b46cfdd5e26c8f904dfddddc73f323b468127272e20e9f" {
+	/*if block.Hash == "0x310dd3c4ae84dd89f1b46cfdd5e26c8f904dfddddc73f323b468127272e20e9f" {
 		log.Printf("Found genesis.hash is %v", block.Hash)
 		byzantiumHardForkHeight = 600000
 		homesteadReward = math.MustParseBig256("9000000000000000000")
@@ -85,6 +86,7 @@ func NewBlockUnlocker(cfg *UnlockerConfig, backend *storage.RedisClient) *BlockU
 		log.Printf("Set homesteadReward(not used) to %v", homesteadReward)
 		log.Printf("Set byzantiumReward(CLO reward) to %v", byzantiumReward)
 	}
+	*/
 	return u
 }
 
