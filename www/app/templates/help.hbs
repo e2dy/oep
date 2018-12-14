@@ -6,8 +6,8 @@
 
   <p>Download one of the following GPU miners.
   <ul>
-    <li>Claymore Dual Miner (AMD/NVIDIA) : <a href="https://bitcointalk.org/index.php?topic=1433925.0">[ANN] Bitcointalk.org</a></li>
-    <li>Ethminer (AMD/NVIDIA): <a href="https://github.com/ethereum-mining/ethminer/releasesi/latest">Ethminer source/binary at Github</a></li>
+    <li>Claymore Dual Miner (AMD/NVIDIA) : <a href="https://bitcointalk.org/index.php?topic=1433925.0" target="_blank">[ANN] Bitcointalk.org</a></li>
+    <li>Ethminer (AMD/NVIDIA): <a href="https://github.com/ethereum-mining/ethminer/releasesi/latest" target="_blank">Ethminer source/binary at Github</a></li>
   </ul>
   </p>
 
@@ -45,7 +45,7 @@
   </dl>
 
       <h4>Claymore Example</h4>
-      <p><strong>Download Claymore Dual Miner (AMD/NVIDIA)</strong>: <a href="https://bitcointalk.org/index.php?topic=1433925.0">[ANN] Bitcointalk.org</a></p>
+      <p><strong>Download Claymore Dual Miner (AMD/NVIDIA)</strong>: <a href="https://bitcointalk.org/index.php?topic=1433925.0" target="_blank">[ANN] Bitcointalk.org</a></p>
       <p>
         <code><em>EthDcrMiner64</em> -epool <em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em> <em>-esm 0</em> -ewal <em>0x0000000000000000000000000000000000000000</em> -eworker <em>your-worker-1</em> -allcoins 1 -allpools 1</code>
       </p>
@@ -60,11 +60,11 @@
 
       <h4>Ethminer Examples</h4>
       <p>
-        <strong>Download Ethminer (AMD/NVIDIA)</strong>: <a href="https://github.com/ethereum-mining/ethminer/releasesi/latest">Ethminer source/binary at Github</a>
+        <strong>Download Ethminer (AMD/NVIDIA)</strong>: <a href="https://github.com/ethereum-mining/ethminer/releases" target="_blank">Ethminer source/binary at Github</a>
       </p>
       <h5>Stratum method</h5>
       <p>
-        <code>ethminer -SP 1 <em>-U</em> -S <em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em> -O <em>0x0000000000000000000000000000000000000000</em>.<em>your-worker-1</em> <em>--farm-recheck 2000</em></code>
+        <code>ethminer <em>-U</em> -F stratum1+tcp://<em>0x0000000000000000000000000000000000000000</em>.<em>your-worker-1</em>@<em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em></code>
       </p>
       <ul>
         <li><code>-SP 1</code> - option for Stratum server</li>
@@ -72,17 +72,5 @@
         <li><code>-S <em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em></code> - stratum_server_name:stratum_port_number</li>
         <li><code>-O <em>0x0000000000000000000000000000000000000000</em>.<em>your-worker-1</em></code> - your_wallet_address.your_worker_name</li>
         <li><code><em>--farm-recheck 2000</em></code> - Leave 2000 ms between checks for changed work (default 500ms. use higher value to use stratum for stability)</li>
-      </ul>
-      <h5>Legacy HTTP method</h5>
-      <p>
-        <code>ethminer <em>-U</em> -F <em>{{config.HttpHost}}</em>:<em>{{config.HttpPort}}</em>/<em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em> <em>--farm-recheck 200</em></code>
-      </p>
-      <ul>
-        <li><code><em>-U</em></code> - NVIDIA GPU or <code><em>-G</em></code> for AMD GPU</li>
-        <li><code>-F <em>{{config.HttpHost}}</em>:<em>{{config.HttpPort}}</em>/<em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em></code>
-          <ul><li>Legacy HTTP method. <em>http_server_name</em>:<em>http_port_number</em></li>
-          <li><code><em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em></code> - <em>your_wallet_address</em>.<em>your_worker_name</em></li>
-          </ul>
-        </li>
       </ul>
 </div>

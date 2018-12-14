@@ -6,8 +6,8 @@
 
   <p>다음의 GPU 마이너 프로그램중 하나를 다운로드하세요.
   <ul>
-    <li>Claymore 듀얼 마이너 (AMD/NVIDIA) : <a href="https://bitcointalk.org/index.php?topic=1433925.0">[ANN] Bitcointalk.org</a></li>
-    <li>Ethminer (AMD/NVIDIA): <a href="https://github.com/ethereum-mining/ethminer/releasesi/latest">Ethminer source/binary at Github</a></li>
+    <li>Claymore 듀얼 마이너 (AMD/NVIDIA) : <a href="https://bitcointalk.org/index.php?topic=1433925.0" target="_blank">[ANN] Bitcointalk.org</a></li>
+    <li>Ethminer (AMD/NVIDIA): <a href="https://github.com/ethereum-mining/ethminer/releasesi/latest" target="_blank">Ethminer source/binary at Github</a></li>
   </ul>
   </p>
 
@@ -45,7 +45,7 @@
   </dl>
 
       <h4>Claymore 예시</h4>
-      <p><strong>Claymore 듀얼 마이너 다운로드 (AMD/NVIDIA)</strong>: <a href="https://bitcointalk.org/index.php?topic=1433925.0">[ANN] Bitcointalk.org</a></p>
+      <p><strong>Claymore 듀얼 마이너 다운로드 (AMD/NVIDIA)</strong>: <a href="https://bitcointalk.org/index.php?topic=1433925.0" target="_blank">[ANN] Bitcointalk.org</a></p>
       <p>
         <code><em>EthDcrMiner64</em> -epool <em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em> -esm 0 -ewal <em>0x0000000000000000000000000000000000000000</em> -eworker <em>your-worker-1</em> -allcoins 1 -allpools 1</code>
       </p>
@@ -61,7 +61,7 @@
 
       <h4>Ethminer 예시</h4>
       <p>
-        <strong>Ethminer 다운로드 (AMD/NVIDIA)</strong>: <a href="https://github.com/ethereum-mining/ethminer/releasesi/latest">Ethminer 소스/바이너리 at Github</a>
+        <strong>Ethminer 다운로드 (AMD/NVIDIA)</strong>: <a href="https://github.com/ethereum-mining/ethminer/releases" target="_blank">Ethminer 소스/바이너리 at Github</a>
       </p>
       <h5>Stratum 방식</h5>
       <p>
@@ -73,18 +73,6 @@
         <li><code>-S <em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em></code> - <em>stratum_server_name</em>:<em>stratum_port_number</em></li>
         <li><code>-O <em>0x0000000000000000000000000000000000000000</em>.<em>your-worker-1</em></code> - your_wallet_address.your_worker_name</li>
         <li><code><em>--farm-recheck 2000</em></code> - 작업이 바뀔 때마다 2000ms간격을 두고 체크한다. (기본값 500ms. Stratum의 경우 2000ms으로 해야 안정적. eth-proxy의 경우 적은 값 사용)</li>
-      </ul>
-      <h5>레거시 HTTP 방식</h5>
-      <p>
-        <code>ethminer <em>-U</em> -F <em>{{config.HttpHost}}</em>:<em>{{config.HttpPort}}</em>/<em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em> <em>--farm-recheck 200</em></code>
-      </p>
-      <ul>
-        <li><code><em>-U</em></code> - NVIDIA GPU 의 경우 사용. AMD GPU의 경우는 <code><em>-G</em></code>.</li>
-        <li><code>-F <em>{{config.HttpHost}}</em>:<em>{{config.HttpPort}}</em>/<em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em></code>
-        <ul><li>레거시 HTTP 방식. <em>http_server_name</em>:<em>http_port_number</em></li>
-        <li><code><em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em></code> - <em>your_wallet_address</em>.<em>your_worker_name</em></li>
-        </ul>
-        </li>
       </ul>
 
 </div>

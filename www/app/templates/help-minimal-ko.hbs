@@ -10,7 +10,7 @@
 <div class="bd-example">
   <h3>Ethminer</h3>
   <p>
-    <code>ethminer <em>-U</em> -F <em>{{config.HttpHost}}</em>:<em>{{config.HttpPort}}</em>/<em>0x0000000000000000000000000000000000000000</em>/<em>your-worker-1</em> <em>--farm-recheck 200</em></code>
+    <code>ethminer <em>-U</em> -F stratum1+tcp://<em>0x0000000000000000000000000000000000000000</em>.<em>your-worker-1</em>@<em>{{config.StratumHost}}</em>:<em>{{config.StratumPort}}</em></code>
   </p>
   <p><span class="label label-info">Hint</span> <code><em>-U</em></code> 옵션은 NVIDIA GPU 사용, <code><em>-G</em></code> 옵션은 AMD GPU 사용</p>
 </div>
